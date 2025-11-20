@@ -10,95 +10,99 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0b0b0d;
-      color: #fff;
+      background: #000;
+      color: #f7f7f7;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(20,20,20,0.85);
-      backdrop-filter: blur(8px);
-      padding: 18px 40px;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(6px);
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #222;
       z-index: 1000;
-      border-bottom: 1px solid #1c1c1c;
     }
 
-    .nav-left {
+    .logo {
       display: flex;
       align-items: center;
-      font-size: 1.4rem;
-      font-weight: 700;
       color: #ffd700;
-      gap: 12px;
+      font-weight: 700;
+      font-size: 1.3rem;
     }
 
-    nav img {
-      width: 32px;
-      height: 32px;
-    }
-
-    /* HEADER */
     header {
-      padding-top: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       color: #ffd700;
+      padding-top: 140px;
+      padding-bottom: 20px;
     }
 
-    header h1 {
+    h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
-      color: #ffd700;
+      margin-bottom: 5px;
     }
 
-    header h2 {
-      font-size: 1.4rem;
-      color: #e6e6e6;
+    h2.subtitle {
+      font-size: 1.3rem;
+      color: #fff;
       margin-top: 0;
     }
 
-    /* CENTER LOGO */
-    .big-logo {
-      margin: 20px auto 10px;
+    /* PULSING LOGO */
+    .logo-pulse {
       width: 200px;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 0 20px #ffd700);
+      height: 200px;
+      margin: 10px auto;
+      animation: pulse 2.0s ease-in-out infinite;
     }
 
-    /* BIO */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #ffd700);
+      }
+      50% {
+        transform: scale(1.35);
+        filter: drop-shadow(0 0 14px #ffd700);
+      }
+      100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #ffd700);
+      }
+    }
+
+    /* BIO SECTION */
     .bio {
       max-width: 700px;
-      margin: 10px auto 40px;
+      margin: 10px auto 30px;
+      padding: 20px;
+      color: #fff;
       text-align: center;
-      font-size: 1.1rem;
       line-height: 1.6;
-      color: #ddd;
-      padding: 0 20px;
+      font-size: 1.1rem;
     }
 
     /* CONTACT FORM */
     .contact {
       margin: 40px auto;
-      max-width: 650px;
+      max-width: 600px;
       background: #ffd700;
       padding: 40px;
-      border-radius: 14px;
+      border-radius: 12px;
+      border: none;
       color: #000;
       text-align: center;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.45);
-    }
-
-    .contact h2 {
-      margin-top: 0;
-      color: #000;
-      font-size: 1.8rem;
-      font-weight: 800;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
 
     input, textarea {
@@ -106,10 +110,11 @@
       padding: 14px;
       margin: 12px 0;
       border-radius: 10px;
-      border: 1px solid #bbb;
+      border: 1px solid #ccc;
       background: #fff;
       color: #000;
       font-size: 1rem;
+      display: block;
       box-sizing: border-box;
     }
 
@@ -131,60 +136,39 @@
       color: #000;
     }
 
-    /* FOOTER */
     footer {
       padding: 40px;
       text-align: center;
       color: #999;
       border-top: 1px solid #222;
-      margin-top: 60px;
-      font-size: 0.95rem;
+      margin-top: 50px;
     }
-
-    /* ANIMATIONS */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-      /* Pulsing pineapple animation */
-    .pulse-icon {
-      animation: pulse 2s infinite ease-in-out;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); filter: drop-shadow(0 0 2px #ffd700); }
-      50% { transform: scale(1.1); filter: drop-shadow(0 0 12px #ffd700); }
-      100% { transform: scale(1); filter: drop-shadow(0 0 2px #ffd700); }
-    }
-</style>
+  </style>
 </head>
 
 <body>
-  <nav class="fade-in">
-    <div class="nav-left">
-      <img src="assets/PHFG.png" class="pulse-icon" alt="Pineapple Haus Logo">
+  <nav>
+    <div class="logo">
+      <img src="assets/PHFG.png" alt="Pineapple Haus Logo" style="width:32px; height:32px; margin-right:10px;" />
       Pineapple Haus Finance
     </div>
   </nav>
 
-  <header class="fade-in">
+  <header>
     <h1>Pineapple Haus Finance Group</h1>
-    <h2>Lending Specialist • Mortgage Broker</h2>
+    <h2 class="subtitle">Lending Specialist • Mortgage Broker</h2>
   </header>
 
-  <img src="assets/PHFG.png" alt="Center Logo" class="big-logo fade-in" />
+  <div class="logo-pulse">
+    <img src="assets/PHFG.png" alt="Pineapple Icon" style="width:100%; height:auto;" />
+  </div>
 
-  <section class="bio fade-in">
-    Thomas James, serving as a Credit Representative for Vivid Loans, is dedicated to delivering personalised, client‑focused lending solutions. With a commitment to transparency and genuine care, Thomas works closely with clients to help them secure the right finance options tailored to their goals.
+  <section class="bio">
+    At Pineapple Haus Finance Group, I specialise in delivering tailored lending solutions that align with your goals. With a commitment to clarity, integrity, and exceptional service, I help clients navigate the lending landscape with confidence. I am proudly operating as a Credit Representative for Vivid Loans.
   </section>
 
-  <section class="contact fade-in">
-    <h2>Enquiry Form</h2>
+  <section class="contact">
+    <h2 style="color:#ffd700; text-align:center;">Enquiry Form</h2>
     <form action="https://formsubmit.co/pineapple.haus.co@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -194,7 +178,7 @@
     </form>
   </section>
 
-  <footer class="fade-in">
+  <footer>
     © Pineapple Haus Finance Group — Thomas James<br>
     Phone: 0400 181 933 — Email: pineapple.haus.co@gmail.com
   </footer>
