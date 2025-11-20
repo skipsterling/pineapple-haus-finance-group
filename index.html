@@ -169,16 +169,20 @@
     <h2 style="color:#ffd700; text-align:center;">Enquiry Form</h2>
 
     <form action="https://formsubmit.co/pineapple.haus.co@gmail.com" method="POST">
-      <!-- Redirect to confirmation page -->
-      <input type="hidden" name="_next" value="https://skipsterling.github.io/pineapple-haus-finance-group/confirmation.html">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number">
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Enquiry</button>
-    </form>
+        <!-- Disable captcha so redirect works -->
+        <input type="hidden" name="_captcha" value="false">
+        
+        <!-- Redirect to your confirmation page -->
+        <input type="hidden" name="_next" value="https://github.com/skipsterling/pineapple-haus-finance-group.git/confirmation.html">
+      
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number">
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      
+        <button type="submit">Send Enquiry</button>
+      </form>
+      
   </section>
 
   <footer>
