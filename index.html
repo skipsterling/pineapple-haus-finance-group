@@ -4,12 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pineapple Haus Finance Group</title>
-  <meta name="description" content="Pineapple Haus Finance Group — Mortgage broker and lending specialist in Australia. Thomas James provides tailored lending solutions with clarity, integrity, and exceptional service.">
-<meta name="keywords" content="mortgage broker, lending specialist, home loans, refinance, Pineapple Haus Finance Group, Thomas James, Vivid Loans, mortgage advice Australia">
-<meta name="author" content="Thomas James">
-<meta name="robots" content="index, follow">
-
   <link rel="icon" type="image/png" href="assets/PHFG.png" />
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="description" content="Pineapple Haus Finance Group — Mortgage broker and lending specialist offering personalised finance solutions. Helping Australians secure home loans, refinancing, and lending advice.">
+  <meta name="keywords" content="mortgage broker, home loans, refinancing, lending specialist, finance broker, Australia, Pineapple Haus Finance Group, Thomas James, Vivid Loans">
+  <meta name="author" content="Thomas James" />
+
+  <!-- Open Graph (Facebook & LinkedIn) -->
+  <meta property="og:title" content="Pineapple Haus Finance Group" />
+  <meta property="og:description" content="Tailored lending solutions with clarity, integrity, and exceptional service. Home loans, refinancing, and expert finance guidance." />
+  <meta property="og:image" content="https://skipsterling.github.io/pineapple-haus-finance-group/assets/PHFG.png" />
+  <meta property="og:url" content="https://skipsterling.github.io/pineapple-haus-finance-group/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pineapple Haus Finance Group" />
+  <meta name="twitter:description" content="Personalised lending and mortgage solutions by Thomas James. Helping you navigate home loans with confidence." />
+  <meta name="twitter:image" content="https://skipsterling.github.io/pineapple-haus-finance-group/assets/PHFG.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Pineapple Haus Finance Group",
+    "image": "https://skipsterling.github.io/pineapple-haus-finance-group/assets/PHFG.png",
+    "url": "https://skipsterling.github.io/pineapple-haus-finance-group/",
+    "description": "Mortgage broker and lending specialist offering personalised lending solutions. Operated by Thomas James, Credit Representative for Vivid Loans.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Australia"
+    },
+    "employee": {
+      "@type": "Person",
+      "name": "Thomas James"
+    }
+  }
+  </script>
 
   <style>
     body {
@@ -18,7 +51,6 @@
       background: #000;
       color: #f7f7f7;
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -32,7 +64,6 @@
       border-bottom: 1px solid #222;
       z-index: 1000;
     }
-
     .logo {
       display: flex;
       align-items: center;
@@ -40,7 +71,6 @@
       font-weight: 700;
       font-size: 1.3rem;
     }
-
     header {
       display: flex;
       flex-direction: column;
@@ -51,41 +81,26 @@
       padding-top: 140px;
       padding-bottom: 20px;
     }
-
     h1 {
       font-size: 3rem;
       margin-bottom: 5px;
     }
-
     h2.subtitle {
       font-size: 1.3rem;
       color: #fff;
       margin-top: 0;
     }
-
-    /* PULSING LOGO */
     .logo-pulse {
       width: 200px;
       height: 200px;
       margin: 10px auto;
       animation: pulse 2.0s ease-in-out infinite;
     }
-
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 0px #ffd700);
-      }
-      50% {
-        transform: scale(1.35);
-        filter: drop-shadow(0 0 14px #ffd700);
-      }
-      100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 0px #ffd700);
-      }
+      0% { transform: scale(1); filter: drop-shadow(0 0 0px #ffd700); }
+      50% { transform: scale(1.35); filter: drop-shadow(0 0 14px #ffd700); }
+      100% { transform: scale(1); filter: drop-shadow(0 0 0px #ffd700); }
     }
-
     .bio {
       max-width: 700px;
       margin: 10px auto 30px;
@@ -95,19 +110,16 @@
       line-height: 1.6;
       font-size: 1.1rem;
     }
-
     .contact {
       margin: 40px auto;
       max-width: 600px;
       background: #ffd700;
       padding: 40px;
       border-radius: 12px;
-      border: none;
       color: #000;
       text-align: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
-
     input, textarea {
       width: 100%;
       padding: 14px;
@@ -117,10 +129,8 @@
       background: #fff;
       color: #000;
       font-size: 1rem;
-      display: block;
       box-sizing: border-box;
     }
-
     button {
       width: 100%;
       background: #000;
@@ -133,12 +143,10 @@
       font-weight: bold;
       transition: 0.3s ease;
     }
-
     button:hover {
       background: #ffd700;
       color: #000;
     }
-
     footer {
       padding: 40px;
       text-align: center;
@@ -147,33 +155,9 @@
       margin-top: 50px;
     }
   </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FinancialService",
-      "name": "Pineapple Haus Finance Group",
-      "image": "https://pineapplehausfinance.com/assets/PHFG.png",
-      "url": "https://pineapplehausfinance.com",
-      "logo": "https://pineapplehausfinance.com/assets/PHFG.png",
-      "description": "Mortgage broker and lending specialist. Tailored lending solutions from Thomas James.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Australia"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Thomas James"
-      },
-      "servesLocation": {
-        "@type": "Country",
-        "name": "Australia"
-      }
-    }
-    </script>
-    
 </head>
-
 <body>
+
   <nav>
     <div class="logo">
       <img src="assets/PHFG.png" alt="Pineapple Haus Logo" style="width:32px; height:32px; margin-right:10px;" />
@@ -191,28 +175,23 @@
   </div>
 
   <section class="bio">
-    My name is Thomas James, and at Pineapple Haus Finance Group I specialise in creating tailored lending solutions that align with your goals. With a strong commitment to clarity, integrity, and exceptional service, I guide clients through the lending landscape with confidence. I proudly operate as a Credit Representative for Vivid Loans.
+    At Pineapple Haus Finance Group, I specialise in delivering tailored lending solutions that align with your goals. With a commitment to clarity, integrity, and exceptional service, I, Thomas James, help clients navigate the lending landscape with confidence. I am proudly operating as a Credit Representative for Vivid Loans.
   </section>
 
   <section class="contact">
     <h2 style="color:#ffd700; text-align:center;">Enquiry Form</h2>
 
     <form action="https://formsubmit.co/pineapple.haus.co@gmail.com" method="POST">
-      <!-- Disable captcha so redirect works -->
       <input type="hidden" name="_captcha" value="false">
-    
-      <!-- Correct redirect URL -->
-      <input type="hidden" name="_next" value="https://www.pineapplehausfinance.com/confirmation.html">
-    
+      <input type="hidden" name="_next" value="https://pineapplehausfinance.com/confirmation.html">
+
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="tel" name="phone" placeholder="Your Phone Number">
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-    
+
       <button type="submit">Send Enquiry</button>
     </form>
-    
-      
   </section>
 
   <footer>
