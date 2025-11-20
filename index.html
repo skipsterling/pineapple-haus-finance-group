@@ -81,7 +81,6 @@
       }
     }
 
-    /* BIO SECTION */
     .bio {
       max-width: 700px;
       margin: 10px auto 30px;
@@ -92,7 +91,6 @@
       font-size: 1.1rem;
     }
 
-    /* CONTACT FORM */
     .contact {
       margin: 40px auto;
       max-width: 600px;
@@ -169,11 +167,16 @@
 
   <section class="contact">
     <h2 style="color:#ffd700; text-align:center;">Enquiry Form</h2>
+
     <form action="https://formsubmit.co/pineapple.haus.co@gmail.com" method="POST">
+      <!-- Redirect to confirmation page -->
+      <input type="hidden" name="_next" value="https://skipsterling.github.io/pineapple-haus-finance-group/confirmation.html">
+
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="tel" name="phone" placeholder="Your Phone Number">
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
       <button type="submit">Send Enquiry</button>
     </form>
   </section>
